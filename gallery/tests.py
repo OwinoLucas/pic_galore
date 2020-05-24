@@ -13,12 +13,18 @@ class CategoryTestClass(TestCase):
 
     #testing save method
     def test_save_category(self):
+        """
+        tests save category functionality
+        """
         self.sports.save_category()
         categories = Category.objects.all()
         self.assertTrue(len(categories) > 0)
 
     #testing delete method
     def test_delete_category(self):
+        """
+        tests category delete functionality
+        """
         category = Category.objects.create(category_name="sports")
         Category.objects.filter(pk=category.pk).delete()
         category.delete_category()
@@ -27,6 +33,9 @@ class CategoryTestClass(TestCase):
 
     #testing update method
     def test_update_category(self):
+        """
+        tests update category functionality
+        """
         category = Category.objects.create(category_name="sports")
         Category.objects.filter(pk=category.pk).update(category_name="travel")
         category.update_category()
@@ -45,7 +54,7 @@ class LocationTestsClass(TestCase):
 
     def test_save_location(self):
         """
-        test checks if location is saved
+        test save location method
         """
         self.Nairobi.save_location()
         locations = location.objects.all()
@@ -53,7 +62,7 @@ class LocationTestsClass(TestCase):
     
     def test_delete_location(self):
         """
-        methods tests if one can delete a location
+        tests delete location method
         """
         try:
             location = location.objects.create(location_name="Nairobi")
@@ -66,7 +75,7 @@ class LocationTestsClass(TestCase):
 
     def test_update_location(self):
         """
-        method checks if it is possible to update location name
+        tests update location method
         """
         try:
             location = location.objects.create(location_name="Nairobi")
@@ -86,7 +95,7 @@ class ImageTestClass(TestCase):
         self.sports.save_category()
 
         #creating a new location and saving it
-        self.new_location = location(name = 'nairobi')
+        self.new_location = location(location_name = 'Nairobi')
         self.new_location.save_location()
 
         self.new_image = Image(image = 'img.jpg',image_name = 'lillard',image_description = 'This is a random test description',category = self.sports)
@@ -101,8 +110,33 @@ class ImageTestClass(TestCase):
 
     def test_save_image(self):
         """
-        method tests model save functionality
+        tests image save functionality
         """
-        self.image.save_image()
+        self.new_image.save_image()
         images = Image.objects.all()
         self.assertTrue(len(images) > 0)
+
+    #testing delete method
+    def test_delete_image(self):
+        """
+        tests image delete functionality
+        """
+        try:
+            image = Image.objects.create(image_name="lillard")
+            Image.objects.filter(pk=image.pk).delete()
+            image.delete_image()
+            images = Image.objects.all()
+            self.assertTrue(len(images) == 0)
+        except:
+            'errors'
+
+    #testing update method
+    def test_update_image(self):
+        """
+        tests image update functionality
+        """
+        image = Image.objects.create(image_name="lillard")
+        Image.objects.filter(pk=image.pk).update(image_name="kyrie")
+        image.update_image()
+        self.assertEqual(image.image_name, 'kyrie')
+ 

@@ -72,7 +72,7 @@ class Image(models.Model):
     """
     class containing image objects
     """
-    image = models.ImageField(upload_to = 'articles/',default='DEFAULT VALUE')
+    image = models.ImageField(upload_to = 'images/',default='DEFAULT VALUE')
     image_name = models.CharField(max_length =60)
     image_description = models.TextField()
     category = models.ForeignKey(Category,null=True,on_delete=models.CASCADE)
@@ -105,8 +105,7 @@ class Image(models.Model):
         """
         self.delete()
 
-
     @classmethod
-    def search_by_category(cls,search_term):
-        images = cls.objects.filter(title__icontains=search_term)
+    def search_by_category(cls,category_id):
+        images = cls.objects.filter(category__pk=category_id)
         return images
