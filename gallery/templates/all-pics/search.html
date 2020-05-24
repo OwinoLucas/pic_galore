@@ -4,9 +4,9 @@
 <div class="container">
     <div class="row">
         {% if categories %}
-        <h2>Found {{ categories|length }} of searched category {{ message }}</h2>
+        <h2>Found {{ categories|length }} images of {{ message }} category </h2>
         {% else %}
-        <h2> Found 0 results for the {{ message }} category</h2>
+        <h2> Found 0 image results for the {{ message }} category</h2>
         {% endif %}
     </div>
 
@@ -17,6 +17,8 @@
             <div class="card" data-toggle="modal" data-target="#{{category.id}}">
                 <img src="{{category.image.url}}" alt="{{category.image_name}}" class="card-img">
             </div>
+
+            <!--modal-->
             <div class="modal fade " id="{{category.id}}" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
