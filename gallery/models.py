@@ -106,6 +106,11 @@ class Image(models.Model):
         self.delete()
 
     @classmethod
-    def search_by_category(cls,category_id):
-        images = cls.objects.filter(category__pk=category_id)
+    def display_all_images(cls):
+        images = cls.objects.all()
+        return images
+
+    @classmethod
+    def search_image_by_category(cls,category_search):
+        images = cls.objects.filter(category__category_name__icontains=category_search)
         return images
