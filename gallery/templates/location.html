@@ -2,10 +2,10 @@
 
 {% block content %}
 <div class="container">
-    <h1> These are pics from this location</h1>
-    {% for location_image in location_images %}
-    <div class="col-md-3 image-box">
+    <h1 class="text-center"> These are pics from this location</h1>
 
+    <div class="card-columns">
+        {% for location_image in location_images %}
         <div class="card" data-toggle="modal" data-target="#q{{location_image.id}}">
             <img src="{{location_image.image.url}}" alt="{{location_image.image_name}}" class="card-img">
         </div>
@@ -41,8 +41,9 @@
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 
-    {% endfor %}
+
 </div>
 {% endblock %}
