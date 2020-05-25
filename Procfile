@@ -1,1 +1,1 @@
-web: gunicorn manage:app
+web: gunicorn pic_galore.wsgi --log-file -
