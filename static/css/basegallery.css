@@ -1,5 +1,6 @@
 .jumbotron {
     background-image: url("../pics/img7.jpg");
+    color: black;
 
 }
 
@@ -9,4 +10,5 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.97;
+
 }
