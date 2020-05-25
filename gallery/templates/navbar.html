@@ -3,12 +3,12 @@
     <ul class="nav justify-content-end bg-dark">
 
         <li class="nav-item">
-            <a class="nav-link active" data-toggle="tab" href="{% url 'index' %}">Home</a>
+            <a class="nav-link active" href="{% url 'index' %}">Home</a>
         </li>
 
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                aria-expanded="false">Dropdown</a>
+                aria-expanded="false">Locations</a>
             <div class="dropdown-menu">
                 {% for location in locations %}
                 <a class="dropdown-item" href="/location/{{location.location_name}}">{{location.location_name}}</a>

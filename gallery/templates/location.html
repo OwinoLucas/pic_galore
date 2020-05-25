@@ -1,6 +1,7 @@
 {%extends 'all-pics/base.html'%}
 
 {% block content %}
+
 <div class="container">
     <h1 class="text-center" style="color: white;"> These are pics from this location</h1>
 
@@ -28,15 +29,14 @@
                         <p class="card-text photo ">Photo description : {{location_image.image_description}}.</p>
                         <p class="card-text shot">Shot in : {{location_image.location}}</p>
                         <p class="card-text cate">Category : {{location_image.category}}</p>
-                        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
-                            <input id="{{location_image.id}}-url" class="form-control input-md responsive" type="text"
-                                value="{{location_image.image.url}}">
-                        </div>
+
                     </div>
                     <div class="modal-footer">
+                        <input id="{{location_image.id}}-url" class="form-control input-md responsive" type="text"
+                            value="{{location_image.image.url}}">
                         <button class="btn btn-success btn-sm"
                             onclick="copyLink('{{location_image.id}}.url')">Copy</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
