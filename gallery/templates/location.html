@@ -6,13 +6,13 @@
     {% for location_image in location_images %}
     <div class="col-md-3 image-box">
 
-        <div class="card" data-toggle="modal" data-target="#{{location_image.id}}">
+        <div class="card" data-toggle="modal" data-target="#q{{location_image.id}}">
             <img src="{{location_image.image.url}}" alt="{{location_image.image_name}}" class="card-img">
         </div>
 
 
         <!-- Modal -->
-        <div class="modal fade" id="{{location_image.id}}" tabindex="-1" role="dialog"
+        <div class="modal fade" id="q{{location_image.id}}" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="modal-body">
                         <img class="card-img-top img-responsive" id="img{{location_image.id}}"
-                            src="{{location_image.image.url}}" width="150px" height="100px" alt="Card image cap">
+                            src="{{location_image.image.url}}" width="auto" height="auto" alt="Card image cap">
                         <p class="card-text photo ">Photo description : {{location_image.image_description}}.</p>
                         <p class="card-text shot">Shot in : {{location_image.location}}</p>
                         <p class="card-text cate">Category : {{location_image.category}}</p>
