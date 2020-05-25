@@ -68,6 +68,13 @@ class location(models.Model):
         """
         self.delete()
 
+    @classmethod
+    def get_locations(cls):
+        locations = location.objects.all()
+        return locations
+
+    
+
 class Image(models.Model):
     """
     class containing image objects
@@ -76,7 +83,7 @@ class Image(models.Model):
     image_name = models.CharField(max_length =60)
     image_description = models.TextField()
     category = models.ForeignKey(Category,null=True,on_delete=models.CASCADE)
-    location = models.ManyToManyField(location)
+    location = models.ForeignKey(location,null=True,on_delete=models.CASCADE)
     
     
     def __str__(self):
@@ -114,3 +121,8 @@ class Image(models.Model):
     def search_image_by_category(cls,category_search):
         images = cls.objects.filter(category__category_name__icontains=category_search)
         return images
+    
+    @classmethod
+    def filter_by_location(cls, location):
+        locate_image = Image.objects.filter(location__location_name=location).all()
+        return locate_image

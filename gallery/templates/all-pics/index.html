@@ -11,13 +11,13 @@
         {% for image in images %}
         <div class="col-md-3 image-box">
 
-            <div class="card" data-toggle="modal" data-target="#{{image.id}}">
+            <div class="card" data-toggle="modal" data-target="#q{{image.id}}">
                 <img src="{{image.image.url}}" alt="{{image.image_name}}" class="card-img">
             </div>
 
 
             <!-- Modal -->
-            <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog"
+            <div class="modal fade" id="q{{image.id}}" tabindex="-1" role="dialog"
                 aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -29,7 +29,7 @@
                         </div>
                         <div class="modal-body">
                             <img class="card-img-top img-responsive" id="img{{image.id}}" src="{{image.image.url}}"
-                                width="150px" height="100px" alt="Card image cap">
+                                width="150px" height="500px" alt="Card image cap">
                             <p class="card-text photo ">Photo description : {{image.image_description}}.</p>
                             <p class="card-text shot">Shot in : {{image.location}}</p>
                             <p class="card-text cate">Category : {{image.category}}</p>

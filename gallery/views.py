@@ -8,10 +8,13 @@ def index(request):
     view function returns the landing page
     """
     images = Image.objects.all()
-    return render(request,'all-pics/index.html',{"images":images})
+    locations = location.get_locations()
+    return render(request,'all-pics/index.html',{"images":images,"locations":locations})
 
 def search_results(request):
-
+    """
+    view function returns the searched categories
+    """
     if 'category' in request.GET and request.GET["category"]:
         category_search = request.GET.get("category")
         searched_categories = Image.search_image_by_category(category_search)
@@ -22,3 +25,7 @@ def search_results(request):
     else:
         message = "You haven't searched for any category"
         return render(request, 'all-pics/search.html',{"message":message})
+
+def locate_image(request, location):
+    images = Image.filter_by_location(location)
+    return render(request, 'location.html', {'location_images': images})
