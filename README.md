@@ -2,6 +2,10 @@
 #### By Lucas Otieno Owino
 ## Description
 A personal gallery application that you display your photos for others to see.
+## Screenshots of the app
+![Screenshot from 2020-05-26 13-00-06](https://user-images.githubusercontent.com/60548928/82887666-01d31700-9f51-11ea-9ad5-d6b936f7c4a9.png)
+![Screenshot from 2020-05-26 13-00-23](https://user-images.githubusercontent.com/60548928/82887692-0a2b5200-9f51-11ea-8faa-d0aac6067a21.png)
+![Screenshot from 2020-05-26 13-00-33](https://user-images.githubusercontent.com/60548928/82887721-11eaf680-9f51-11ea-9149-6b7bd17896f1.png)
 ## User Story
 * View different photos that interest me.
 * Click on a single photo to expand it and also view the details of the photo. The photo details must appear on a modal within the same route as the main page.
