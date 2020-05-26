@@ -3,9 +3,12 @@
 ## Description
 A personal gallery application that you display your photos for others to see.
 ## Screenshots of the app
-![Screenshot from 2020-05-26 13-00-06](https://user-images.githubusercontent.com/60548928/82887666-01d31700-9f51-11ea-9ad5-d6b936f7c4a9.png)
-![Screenshot from 2020-05-26 13-00-23](https://user-images.githubusercontent.com/60548928/82887692-0a2b5200-9f51-11ea-8faa-d0aac6067a21.png)
-![Screenshot from 2020-05-26 13-00-33](https://user-images.githubusercontent.com/60548928/82887721-11eaf680-9f51-11ea-9149-6b7bd17896f1.png)
+* Home page
+![Screenshot from 2020-05-26 13-00-06](https://user-images.githubusercontent.com/60548928/82891922-35b13b00-9f57-11ea-8afe-044045d86eff.png)
+* Search category page
+![Screenshot from 2020-05-26 13-00-33](https://user-images.githubusercontent.com/60548928/82891958-419cfd00-9f57-11ea-9718-14ab5ccc5f7d.png)
+* Image details
+![Screenshot from 2020-05-26 13-44-03](https://user-images.githubusercontent.com/60548928/82892003-59748100-9f57-11ea-9f86-30d5ddbe519d.png)
 ## User Story
 * View different photos that interest me.
 * Click on a single photo to expand it and also view the details of the photo. The photo details must appear on a modal within the same route as the main page.
