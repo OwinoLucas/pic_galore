@@ -42,7 +42,7 @@ A personal gallery application that you display your photos for others to see.
 | Location | Click on the location drop down | Takes the user to the page according to location |
 
 ## Link to live site
-[](link)
+[https://picgalore.herokuapp.com/](link)
 ## License
 Copyright (c) [2020] [Lucas Otieno]
 
