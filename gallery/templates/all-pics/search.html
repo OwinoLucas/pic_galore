@@ -34,11 +34,11 @@
                     <div class="modal-body">
                         <img src="{{category.image.url}}" alt="{{category.image_name}}" width="auto" height="auto"
                             class="img-fluid">
-                        <p>{{category.image_description}}</p>
-                        <span class="btn btn-sm btn-outline-success">{{category.category | title}}</span> <a
-                            href="/location/{{category.location}}"
-                            class="btn btn-sm btn-outline-info">{{category.location}}</a>
+                        <p class="card-text photo ">Photo description :{{category.image_description}}</p>
+                        <p class="card-text shot">Shot in : {{category.location}}</p>
+                        <p class="card-text cate">Category : {{category.category | title}}</p>
                     </div>
+
                     <div class="modal-footer">
                         <input class="form-control input-lg" type="text" value="{{category.image.url}}"
                             id="{{image.id}}.url">
