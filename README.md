@@ -36,7 +36,7 @@ A personal gallery application that you display your photos for others to see.
 * Your project should be deployed to Heroku.
 * Your project should contain proper commit messages.
 ## Technologies Used
-  * Python 3.6.5
+  * Python 3.6.9
   * HTML5, CSS and Bootstrap
   * Django Framework
   * Postgressql
